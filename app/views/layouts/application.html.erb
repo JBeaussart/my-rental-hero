@@ -9,9 +9,41 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:300,400,500,700" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
   </head>
 
   <body>
     <%= yield %>
+
+    <div class="container">
+
+      <div class="card-product">
+
+<%= image_tag "canard_man.jpg", alt: "Canard-man", :class => 'card-img' %>
+
+      <!-- <img src="app/assets/images/canard_man.jpg"> -->
+
+        <div class=card-product-info>
+
+          <h2 class="card-title">
+            Canard-man
+          </h2>
+
+          <p class="card-text">
+            The yellow hero
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
   </body>
 </html>
