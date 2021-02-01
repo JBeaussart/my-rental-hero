@@ -1,4 +1,20 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner">
+  <div class="container">
+    <h1>Heros Renter</h1>
+    <p>Change your life, rent a Hero !!!</p>
+    <a class="btn btn-success" href="#">Rent Now</a>
+  </div>
+</div>
+
+<div class="container">
+  <div class="card-product">
+    <%= image_tag "canard_man.jpg", alt: "Canard-man", :class => 'card-img' %>
+    <!-- <img src="app/assets/images/canard_man.jpg"> -->
+    <div class=card-product-info>
+      <h2 class="card-title">Canard-man</h2>
+      <p class="card-text">The yellow hero</p>
+    </div>
+  </div>
+</div>
 
 <%= link_to "Hello guy ! Log in to start the heros' experience !", user_session_path %>
