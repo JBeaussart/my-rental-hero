@@ -19,7 +19,11 @@
     <nav class="navbar justify-content-between fixed-top">
       <a class="navbar-brand logo_navbar"><%= image_tag "logo.png", alt: "Logo", width: 50 %></a>
       <form class="form-inline">
-        <span><%= link_to "#{current_user.email}", user_path(current_user) %></span>
+
+        <% if current_user %>
+          <span><%= link_to "#{current_user.email}", user_path(current_user) %></span>
+        <% end %>
+
         <input class="form-control mr-sm-2" type="search" placeholder="Search Hero" aria-label="Search">
         <button class="btn btn-outline-success mx-2 my-2 my-sm-0" type="submit">Search</button>
         <button class="btn btn-outline-success mx-2 my-2 my-sm-0" type="submit"><%= link_to "Login", user_session_path %></button>

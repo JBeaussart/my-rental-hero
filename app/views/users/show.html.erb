@@ -1,2 +1,4 @@
 <h2><%= current_user.email %></h2>
 <h2><%= current_user.first_name %></h2>
+
+<p><%= button_to "logout", destroy_user_session_path, method: :delete %></p>
