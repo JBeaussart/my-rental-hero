@@ -2,9 +2,9 @@
   <div class="row">
     <div class="col-6">
       <h1>Super Heros</h1>
-        <%  @super_heros.each do |super_hero| %>
+        <% @super_heros.each do |super_hero| %>
           <p>
-            <%= link_to super_hero.nickname, restaurant_path(restaurant) %>
+            <%= link_to super_hero.nickname, super_heros_path(super_hero) %>
           </p>
         <% end %>
     </div>
