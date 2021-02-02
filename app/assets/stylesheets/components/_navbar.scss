@@ -1,16 +1,7 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
-}
-
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
-}
-
 .navbar {
   background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+}
+
+.logo_navbar {
+  cursor: pointer;
 }
