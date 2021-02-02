@@ -3,5 +3,10 @@
 #
 # Examples:
 #
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+puts "Cleaning database..."
+SuperHero.destroy_all
+
+puts "Creating SuperHeros..."
+ironman = SuperHero.create([{ nickname: 'Iron man' }, { description: 'Je suis un genie milliardaire' }])
+
+puts "Finished!"
