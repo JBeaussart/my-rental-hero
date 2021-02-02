@@ -1,5 +1,5 @@
 class SuperHerosController < ApplicationController
   def index
-    @super_heros = Superheros.all
+    @super_hero = Superheros.all
   end
 end
