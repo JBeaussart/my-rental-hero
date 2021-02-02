@@ -27,6 +27,7 @@
         <input class="form-control mr-sm-2" type="search" placeholder="Search Hero" aria-label="Search">
         <button class="btn btn-outline-success mx-2 my-2 my-sm-0" type="submit">Search</button>
         <button class="btn btn-outline-success mx-2 my-2 my-sm-0" type="submit"><%= link_to "Login", user_session_path %></button>
+        <%= button_to "logout", destroy_user_session_path, method: :delete %>
       </form>
     </nav>
 
