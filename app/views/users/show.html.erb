@@ -1,0 +1,7 @@
+<div class="container">
+  <h2><%= "#{current_user.first_name} #{current_user.last_name}" %></h2>
+  <h2><%= current_user.email %></h2>
+  <h2><%= current_user.company %></h2>
+
+  <%= link_to "Edit Profil", edit_user_registration_path %>
+</div>
