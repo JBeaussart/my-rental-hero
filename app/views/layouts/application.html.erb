@@ -29,7 +29,7 @@
         <button class="btn btn-outline-success mx-2 my-2 my-sm-0" type="submit"><%= link_to "Login", user_session_path %></button>
 
         <% if current_user %>
-          <%= button_to "Logout", destroy_user_session_path, method: :delete %>
+          <%= link_to "Logout", destroy_user_session_path, method: :delete %>
         <% end %>
       </form>
     </nav>
