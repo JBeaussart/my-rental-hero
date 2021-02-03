@@ -8,16 +8,13 @@ class SuperHerosController < ApplicationController
   end
 
   def new
-    @user = User.find(params[:user_id])
     @super_hero = SuperHero.new
   end
 
   def create
-    SuperHero.new(super_hero_params)
-    @user = User.find(params[:user_id])
-    @super_hero.user = @user
+    @super_hero = SuperHero.new(super_hero_params)
     if @super_hero.save
-      redirect_to super_heros_path
+      redirect_to super_heros_path(@super_hero)
     else
       render :new
     end
@@ -42,6 +39,6 @@ class SuperHerosController < ApplicationController
   private
 
   def super_hero_params
-    params.require(:super_heros).permit(:nickname, :description)
+    params.require(:super_hero).permit(:nickname, :description)
   end
 end

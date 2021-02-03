@@ -3,9 +3,10 @@
     <div class="col-6">
       <h1>Super Heros</h1>
         <% @super_heros.each do |super_hero| %>
-          <p><%= link_to super_hero.nickname, super_heros_path(super_hero) %></p>
+          <p><%= link_to super_hero.nickname, super_hero_path(super_hero) %></p>
           <p><%= super_hero.description %></p>
         <% end %>
     </div>
   </div>
+    <%= link_to 'Create Super Hero',  new_super_hero_path %>
 </div>
