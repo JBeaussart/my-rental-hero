@@ -22,15 +22,15 @@ class SuperHerosController < ApplicationController
       render :new
     end
   end
-
+  
   def edit
     @super_hero = SuperHero.find(params[:id])
   end
-
+  
   def update
     @super_hero = SuperHero.find(params[:id])
     @super_hero.update(super_hero_params)
-    redirect_to super_hero_path(super_heros)
+    redirect_to user_super_heros_path(@super_hero.user)
   end
 
   def destroy
