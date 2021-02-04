@@ -18,6 +18,7 @@
   <body>
     <nav class="navbar justify-content-between fixed-top">
     <a class="navbar-brand logo_navbar" href="/"><%= image_tag "logo.png", alt: "Logo", width: 50 %></a>
+    <h1>Heros Renter</h1>
       <form class="form-inline">
 
         <% if current_user %>
@@ -29,7 +30,7 @@
         <%= link_to "Login", user_session_path, class: 'btn btn-outline-success mx-2 my-2 my-sm-0' %>
 
         <% if current_user %>
-          <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+          <%= link_to "Logout", destroy_user_session_path, class: 'btn btn-outline-success mx-2 my-2 my-sm-0', method: :delete %>
         <% end %>
       </form>
     </nav>
