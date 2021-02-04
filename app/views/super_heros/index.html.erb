@@ -4,7 +4,7 @@
       <h1>Super Heros</h1>
         <% @super_heros.each do |super_hero| %>
           <p>
-            <%= link_to super_hero.nickname, user_super_heros_path(super_hero) %>
+            <%= link_to super_hero.nickname, super_hero_path(super_hero) %>
             <%= link_to super_hero_path(super_hero), method: :delete do %>
               <i class="fa fa-trash"></i>
             <% end %>
