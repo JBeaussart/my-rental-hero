@@ -1,19 +1,17 @@
 .navbar {
   background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
-
-  h1 {
-  color: #1EDD87;
-  position: absolute;
-  margin-left: 80px;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 50px;
-  font-weight: bold;
-  }
 }
 
 .logo_navbar {
   cursor: pointer;
-}
-.logo_navbar {
   position: relative;
+}
+
+.user_loggin {
+  position: absolute;
+  margin-left: -120px;
+  font-size: 20px;
+  color: #1EDD87;
+  opacity: .8;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
