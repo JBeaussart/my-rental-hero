@@ -22,19 +22,19 @@ class SuperHerosController < ApplicationController
   end
 
   def edit
-    @super_heros = SuperHero.find(params[:id])
+    @super_hero = SuperHero.find(params[:id])
   end
 
   def update
-    @super_heros = SuperHero.find(params[:id])
-    @super_heros.update(super_hero_params)
-    redirect_to super_heros_path(super_heros)
+    @super_hero = SuperHero.find(params[:id])
+    @super_hero.update(super_hero_params)
+    redirect_to super_hero_path(super_heros)
   end
 
   def destroy
-    @super_heros = SuperHero.find(params[:id])
-    @super_heros.destroy
-    redirect_to super_heros_path(@super_hero.user)
+    @super_hero = SuperHero.find(params[:id])
+    @super_hero.destroy
+    redirect_to user_super_heros_path(@super_hero.user)
   end
 
   private
