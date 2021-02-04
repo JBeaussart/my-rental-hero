@@ -25,16 +25,17 @@ class BookingsController < ApplicationController
   def update
     @booking = Booking.find(params[:id])
     @booking.update(booking_params)
-    redirect_to
+    redirect_to user_super_heros_path(@super_hero)
   end
 
   def destroy
     @booking = Booking.find(params[:id])
     @booking.destroy
+    redirect_to user_super_heros_path(@super_hero)
   end
 
   def booking_params
-    params.require(:booking)
+    params.require(:booking).permit(:starting_date, ending_date, :review)
   end
 
 end
