@@ -9,13 +9,15 @@ class SuperHerosController < ApplicationController
   end
 
   def new
+    @user = User.find(params[:user_id])
     @super_hero = SuperHero.new
   end
 
   def create
     @super_hero = SuperHero.new(super_hero_params)
+    @super_hero.user = User.find(params[:user_id])
     if @super_hero.save
-      redirect_to super_heros_path(@super_hero)
+      redirect_to user_super_heros_path(@super_hero)
     else
       render :new
     end
