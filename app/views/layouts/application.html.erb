@@ -24,9 +24,9 @@
           <span><%= link_to "#{current_user.email}", user_path(current_user) %></span>
         <% end %>
 
-        <input class="form-control mr-sm-2" type="search" placeholder="Search Hero" aria-label="Search">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search your Hero" aria-label="Search">
         <button class="btn btn-outline-success mx-2 my-2 my-sm-0" type="submit">Search</button>
-        <button class="btn btn-outline-success mx-2 my-2 my-sm-0" type="submit"><%= link_to "Login", user_session_path %></button>
+        <%= link_to "Login", user_session_path, class: 'btn btn-outline-success mx-2 my-2 my-sm-0' %>
 
         <% if current_user %>
           <%= link_to "Logout", destroy_user_session_path, method: :delete %>
