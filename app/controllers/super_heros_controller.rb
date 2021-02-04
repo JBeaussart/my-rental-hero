@@ -1,6 +1,5 @@
 class SuperHerosController < ApplicationController
   def index
-    # @user = User.find(params[:id])
     @super_heros = SuperHero.all
   end
 
