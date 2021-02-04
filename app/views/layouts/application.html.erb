@@ -23,9 +23,9 @@
           <%= link_to "#{current_user.first_name} #{current_user.last_name}", user_path(current_user), class: 'user_loggin' %>
         <% end %>
 
-        <input class="form-control mr-sm-2" type="search" placeholder="Superhero landing" aria-label="Search">
-        <button class="btn btn-outline-success mx-2 my-2 my-sm-0" type="submit">Search</button>
-        <%= link_to "Login", user_session_path, class: 'btn btn-outline-success mx-2 my-2 my-sm-0' %>
+        <input class="btn-nav form-control mr-sm-2" type="search" placeholder="Superhero landing" aria-label="Search">
+        <button class="btn-nav btn btn-outline-success mx-2 my-2 my-sm-0" type="submit">Search</button>
+        <%= link_to "Login", user_session_path, class: 'btn-nav btn btn-outline-success mx-2 my-2 my-sm-0' %>
 
         <% if current_user %>
           <%= link_to "Logout", destroy_user_session_path, class: 'btn btn-outline-danger mx-2 my-2 my-sm-0', method: :delete %>
