@@ -1,5 +1,5 @@
 .banner {
-  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://1n0g9sqmedx94.wpcdn.shift8cdn.com/wp-content/uploads/tdomf/229518/1311600755035.jpg);
+  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(https://1n0g9sqmedx94.wpcdn.shift8cdn.com/wp-content/uploads/tdomf/229518/1311600755035.jpg);
   background-size: cover;
   background-position: absolute;
   padding: 150px;
@@ -11,16 +11,25 @@
 }
 
 .banner h1 {
-  margin: 0;
-  color: white;
+  font-family: 'Therace-0W0pG', 'Helvetica', sans-serif;
+  font-size: 150px;
+  margin-top: -160px;
+  margin-bottom: 80px;
+  color: #1EDD87;
+  -webkit-text-stroke: 0.1px black;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 80px;
-  font-weight: bold;
 }
 
-.banner p {
-  font-size: 24px;
-  color: white;
-  opacity: .7;
+.banner h2 {
+  font-family: 'TAGACNRG', 'Helvetica', sans-serif;
+  margin-bottom: 30px;
+  font-size: 30px;
+  color: #1EDD87;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.btn-hero {
+  font-family: 'TAGACNRG', 'Helvetica', sans-serif;
+  border-radius: 4px;
+  box-shadow: 10px 5px 5px black;
 }
