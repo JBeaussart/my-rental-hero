@@ -8,7 +8,7 @@ class SuperHerosController < ApplicationController
   end
 
   def new
-    @user = User.find(params[:user_id])
+    @user = current_user
     @super_hero = SuperHero.new
   end
 
