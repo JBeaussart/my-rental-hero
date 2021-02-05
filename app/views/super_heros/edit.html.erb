@@ -1,12 +1,12 @@
 <div class="container">
   <div class="row mt-5 rounded">
     <div class="col-6 m-auto bg-white p-4">
-    <h1 class="mb-5">Add a Super Heros</h1>
-      <%= simple_form_for [ @user, @super_hero ] do |f| %>
+    <h1 class="mb-5">Edit a Super Heros</h1>
+      <%= simple_form_for [ @super_hero ] do |f| %>
         <%= f.input :nickname %>
-         <%= f.input :description %>
+        <%= f.input :description %>
         <%= f.submit "Submit", class: "btn btn-success" %>
-        <%= link_to "Cancel", user_super_heros_path, class: "btn btn-danger" %>
+        <%= link_to "Cancel", user_super_heros_path(@super_hero), class: "btn btn-danger" %>
       <% end %>
     </div>
   </div>
