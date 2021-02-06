@@ -1,12 +1,11 @@
 class BookingsController < ApplicationController
-    def create
-    raise
+  def create
     @super_hero = SuperHero.find(params[:super_hero_id])
     @booking = Booking.new(booking_params)
     @booking.super_hero_id = @super_hero.id
     @booking.user = current_user
     if @booking.save
-      redirect_to user_path(current_user)
+      redirect_to super_heros_path(@super_heros)
     else
       render :new
     end

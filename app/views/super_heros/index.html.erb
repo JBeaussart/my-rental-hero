@@ -3,10 +3,16 @@
     <div class="col-6">
       <h1>Super Heros</h1>
         <% @super_heros.each do |super_hero| %>
-          <p><%= link_to super_hero.nickname, user_super_heros_path(super_hero) %></p>
-          <p><%= super_hero.description %></p>
+          <div class="card-product">
+            <%= image_tag "canard_man.jpg", alt: "Canard-man", :class => 'card-img' %>
+            <div class=card-product-info>
+              <h2 class="card-title"><%= link_to super_hero.nickname, super_hero_path(super_hero) %></h2>
+              <div class="card-text">
+                <p><%= super_hero.description %></p>
+              </div>
+            </div>
+          </div>
         <% end %>
     </div>
   </div>
-    <%= link_to 'Create Super Hero',  new_user_super_hero_path %>
 </div>

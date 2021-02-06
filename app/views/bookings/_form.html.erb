@@ -1,4 +1,4 @@
-<%= simple_form_for [@booking] do |f| %>
+<%= simple_form_for [@super_hero, @booking] do |f| %>
   <%= f.input :starting_date %>
   <%= f.input :ending_date %>
   <%= f.submit "Book your hero", class: "btn btn-primary" %>
