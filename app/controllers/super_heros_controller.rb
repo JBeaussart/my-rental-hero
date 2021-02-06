@@ -8,15 +8,14 @@ class SuperHerosController < ApplicationController
   end
 
   def new
-    @user = current_user
     @super_hero = SuperHero.new
   end
 
   def create
     @super_hero = SuperHero.new(super_hero_params)
-    @super_hero.user = User.find(params[:user_id])
+    @super_hero.user = current_user
     if @super_hero.save
-      redirect_to user_path(@super_hero.user)
+      redirect_to user_path(current_user)
     else
       render :new
     end
@@ -29,13 +28,13 @@ class SuperHerosController < ApplicationController
   def update
     @super_hero = SuperHero.find(params[:id])
     @super_hero.update(super_hero_params)
-    redirect_to user_path(@super_hero.user)
+    redirect_to user_path(current_user)
   end
 
   def destroy
     @super_hero = SuperHero.find(params[:id])
     @super_hero.destroy
-    redirect_to user_path(@super_hero.user)
+    redirect_to user_path(current_user)
   end
 
   private
