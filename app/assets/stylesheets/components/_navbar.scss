@@ -1,5 +1,5 @@
 .navbar {
-  background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+  background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
 }
 
 .logo_navbar {
@@ -10,7 +10,7 @@
   margin-right: 40px;
   font-size: 20px;
   font-family: 'TAGACNRG', 'Helvetica', sans-serif;
-  color: #1EDD87;
+  color: #22b4b4;
   opacity: .8;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
@@ -18,4 +18,24 @@
 .btn-nav {
   font-family: 'TAGACNRG', 'Helvetica', sans-serif;
   border-radius: 4px;
+}
+
+.btn-nav-blue {
+  font-family: 'TAGACNRG', 'Helvetica', sans-serif;
+  border-radius: 4px;
+  background: transparent;
+  color: #22b4b4;
+  border: 1px solid #22b4b4;
+  padding: 7px;
+    &:hover {
+      background-color: #22b4b4;
+      color: black;
+    }
+}
+
+.btn-font-logout {
+  font-family: 'TAGACNRG', 'Helvetica', sans-serif;
+    &:hover {
+      color: black;
+    }
 }

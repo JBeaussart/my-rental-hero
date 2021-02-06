@@ -15,7 +15,7 @@
   font-size: 150px;
   margin-top: -160px;
   margin-bottom: 80px;
-  color: #1EDD87;
+  color: #22b4b4;
   -webkit-text-stroke: 0.1px black;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
@@ -24,7 +24,7 @@
   font-family: 'TAGACNRG', 'Helvetica', sans-serif;
   margin-bottom: 30px;
   font-size: 30px;
-  color: #1EDD87;
+  color: #22b4b4;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
@@ -34,4 +34,11 @@
   box-shadow: 10px 5px 5px black;
   font-size: 30px;
   font-weight: bold;
+  color: #22b4b4;
+  border: 2px solid #22b4b4;
+  padding: 16px;
+    &:hover {
+      background-color: #22b4b4;
+      color: white;
+    }
 }
