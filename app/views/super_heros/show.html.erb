@@ -4,5 +4,15 @@
       <h1><%= @super_hero.nickname %></h1>
           <p><%= @super_hero.description %></p>
     </div>
+    <div class="booking-form">
+        <h1>Book your hero</h1>
+        <div class="mt-3">
+          <%= simple_form_for [@super_hero, @booking] do |f| %>
+            <%= f.input :starting_date %>
+            <%= f.input :ending_date %>
+            <%= f.submit "Book your hero", class: "btn btn-primary" %>
+          <% end %>
+        </div>
+      </div>
   </div>
 </div>
