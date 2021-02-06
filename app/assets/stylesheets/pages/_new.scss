@@ -1,30 +1,84 @@
 html {
-  background: linear-gradient(to left, #4ADD87, #4446c0);
+  background: linear-gradient(to left,#ca2115, #2b2ec5);
 }
 
-.navbar-margin-bottom {
-  background: linear-gradient(to left, #4ADD87, #4446c0);
+// LOGIN
+.navbar-margin-bottom-login{
+  background: linear-gradient(to left,#ca2115, #2b2ec5);
+}
+
+.logo-size-form-login {
+  width: 900px;
 }
 
 .text-login {
   color: white;
-    &:hover {
-      color: black;
-    }
+  &:hover {
+    color: black;
+  }
 }
 
-.image-logo-bg-right {
+.image-logo-bg-right-login {
   position: absolute;
   right: -300px;
   bottom: -810px;
 }
 
-.image-logo-bg-left {
+.image-logo-bg-left-login {
   position: absolute;
   left: -300px;
   bottom: -900px;
 }
 
-.logo-size-form {
-  width: 900px;
+// SIGNUP
+
+.navbar-margin-bottom-signup {
+  background: linear-gradient(to left,#ca2115, #2b2ec5);
+}
+
+
+.logo-size-form-signup-left {
+  width: 650px;
+}
+
+.logo-size-form-signup-right {
+  width: 650px;
+}
+
+.image-logo-bg-right-signup {
+  position: absolute;
+  right: -200px;
+  bottom: -100px;
+}
+
+.image-logo-bg-left-signup {
+  position: absolute;
+  left: -150px;
+  bottom: -750px;
+}
+
+// FORGOT PASSWORD
+
+.navbar-margin-bottom-forgotpwd {
+  background: linear-gradient(to left,#ca2115, #2b2ec5);
+}
+
+.logo-size-form-forgotpwd-left {
+  width: 750px;
+}
+
+.logo-size-form-forgotpwd-right {
+  width: 650px;
+}
+
+.image-logo-bg-left-forgotpwd {
+  position: absolute;
+  left: -160px;
+  bottom: -500px;
+}
+
+.image-logo-bg-right-forgotpwd {
+  position: absolute;
+  right: -150px;
+  bottom: -500px;
 }

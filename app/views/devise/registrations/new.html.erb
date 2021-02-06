@@ -1,4 +1,7 @@
-<div class="container">
+<div class="navbar-margin-bottom-signup position-relative">
+<div class="image-logo-bg-left-signup"><%= image_tag("iron-man.png", :alt => "logo", class:"logo-size-form-signup-right") %></div>
+<div class="image-logo-bg-right-signup"><%= image_tag("thanos.png", :alt => "logo", class:"logo-size-form-signup-left") %></div>
+<div class="container mt-5 w-50 bg-white rounded p-5 border bg-transparent text-white">
   <h2>Sign up</h2>
 
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -22,7 +25,7 @@
     </div>
 
     <div class="form-actions">
-      <%= f.button :submit, "Sign up" %>
+      <%= f.button :submit, "Sign up", class:"btn btn-outline-light" %>
     </div>
   <% end %>
 
