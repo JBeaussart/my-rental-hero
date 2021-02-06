@@ -2,5 +2,5 @@ class SuperHero < ApplicationRecord
   belongs_to :user
   has_many :bookings
 
-  validates uniqueness: true
+  validates :nickname, uniqueness: true
 end
