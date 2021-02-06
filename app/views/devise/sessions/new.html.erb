@@ -1,5 +1,7 @@
-<div class="navbar-margin-bottom">
-  <div class="container mt-5 w-25 bg-white rounded p-5 border border-success">
+<div class="navbar-margin-bottom position-relative">
+<div class="image-logo-bg-left"><%= image_tag("captain-america.png", :alt => "logo", class:"logo-size-form") %></div>
+<div class="image-logo-bg-right"><%= image_tag("hulk.png", :alt => "logo", class:"logo-size-form") %></div>
+  <div class="container mt-5 w-25 bg-white rounded p-5 border bg-transparent text-white">
     <h2>Log in</h2>
 
     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -14,8 +16,8 @@
         <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
       </div>
 
-      <div class="form-actions">
-        <%= f.button :submit, "Log in" %>
+      <div class="form-actions btn btn-outline-light p-1 text-login">
+        <%= f.button :submit, "Log in", class:"text-login" %>
       </div>
     <% end %>
 
