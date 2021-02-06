@@ -5,11 +5,7 @@
       <div class="booking-form">
         <h1>Book your hero</h1>
         <div class="mt-3">
-          <%= simple_form_for [@user, @booking] do |f| %>
-          <%= f.input :starting_date %>
-          <%= f.input :ending_date %>
-          <%= f.submit "Book your hero", class: "btn btn-primary" %>
-<% end %>
+          <%= render "form", booking: @booking %>
         </div>
       </div>
 

@@ -1,5 +1,6 @@
 class BookingsController < ApplicationController
-  def create
+    def create
+    raise
     @super_hero = SuperHero.find(params[:super_hero_id])
     @booking = Booking.new(booking_params)
     @booking.super_hero_id = @super_hero.id
@@ -11,24 +12,24 @@ class BookingsController < ApplicationController
     end
   end
 
-#   def index
-#     @bookings = Booking.all
-#   end
-
-  def show
-    @booking = Booking.find(params[:id])
+  def new
+    @booking = Booking.new
   end
 
-#   def update
+#   def show
 #     @booking = Booking.find(params[:id])
-#     @booking.update(booking_params)
-#     redirect_to user_super_hero_path(@super_hero)
 #   end
+
+  def update
+    @booking = Booking.find(params[:id])
+    @booking.update(booking_params)
+    redirect_to user_super_hero_path(@super_hero)
+  end
 
   def destroy
     @booking = Booking.find(params[:id])
     @booking.destroy
-    redirect_to user_super_hero_path(@super_hero)
+    redirect_to user_super_hero_path(@super_heros)
   end
 
   private
