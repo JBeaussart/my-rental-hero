@@ -14,24 +14,10 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
-
   <body>
-    <nav class="navbar justify-content-between fixed-top">
-    <a class="navbar-brand logo_navbar" href="/"><%= image_tag "logo.png", alt: "Logo", width: 50 %></a>
-      <form class="form-inline">
-        <% if current_user %>
-          <%= link_to "#{current_user.first_name} #{current_user.last_name}", user_path(current_user), class: 'user_loggin' %>
-        <% end %>
 
-        <input class="btn-nav form-control mr-sm-2" type="search" placeholder="Superhero landing" aria-label="Search">
-        <button class="btn-nav btn-nav-blue" type="submit">Search</button>
-        <%= link_to "Login", user_session_path, class: 'btn-nav btn-nav-blue mx-2 my-2 my-sm-0' %>
-
-        <% if current_user %>
-          <%= link_to "Logout", destroy_user_session_path, class: 'btn btn-font-logout btn-outline-danger mx-2 my-2 my-sm-0', method: :delete %>
-        <% end %>
-      </form>
-    </nav>
+    <%= render 'shared/navbar' %>
+    <%= render 'shared/footer' %>
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
