@@ -6,6 +6,7 @@ class SuperHerosController < ApplicationController
 
   def show
     @super_hero = SuperHero.find(params[:id])
+    @booking = Booking.new
   end
 
   def new
