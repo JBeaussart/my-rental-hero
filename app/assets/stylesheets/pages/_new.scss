@@ -1,0 +1,30 @@
+html {
+  background: linear-gradient(to left, #4ADD87, #4446c0);
+}
+
+.navbar-margin-bottom {
+  background: linear-gradient(to left, #4ADD87, #4446c0);
+}
+
+.text-login {
+  color: white;
+    &:hover {
+      color: black;
+    }
+}
+
+.image-logo-bg-right {
+  position: absolute;
+  right: -300px;
+  bottom: -810px;
+}
+
+.image-logo-bg-left {
+  position: absolute;
+  left: -300px;
+  bottom: -900px;
+}
+
+.logo-size-form {
+  width: 900px;
+}
