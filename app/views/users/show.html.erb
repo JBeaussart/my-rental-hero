@@ -16,6 +16,6 @@
   <%= link_to "Edit Profil", edit_user_registration_path %>
 
   <% if !current_user.company.nil? %>
-    <%= link_to 'Create Super Hero',  new_user_super_hero_path(current_user.id) %>
+    <%= link_to 'Create Super Hero',  new_super_hero_path %>
   <% end %>
 </div>
