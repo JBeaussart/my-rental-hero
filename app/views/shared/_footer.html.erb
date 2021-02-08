@@ -1,24 +1,18 @@
 <footer class="fixed-bottom">
-  <div class="ml-3">
-    <div class="row">
-      <div class="form-inline">
-        <h5 class="text-uppercase">Register for free</h5>
-        <p><%= link_to 'Sign up', new_user_registration_path %></p>
-      </div>
-
-      <div>
-        <h5 class="text-uppercase">Follow us</h5>
-        <i class="fab fa-facebook"></i>
-        <i class="fab fa-twitter"></i>
-        <i class="fab fa-google-plus-g"></i>
-      </div>
-
-      <div>
-        © 2021 Copyright:
-        <a href="#">LaPassion.com</a>
-      </div>
-    </div>
+  <div class="sign form-inline">
+    <h5>Register for free</h5>
+    <span><%= link_to 'Sign up', new_user_registration_path %></span>
   </div>
 
+  <div class="copyright form-inline">
+    © 2021 Copyright :
+    <a href="#">LaPassion.com</a>
+  </div>
 
+  <div class="social-media form-inline">
+    <h5>Follow us</h5>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-google-plus-g"></i></a>
+  </div>
 </footer>

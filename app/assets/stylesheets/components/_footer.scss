@@ -1,6 +1,46 @@
 footer {
+  font-family: 'TAGACNRG', 'Helvetica', sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   color: #22b4b4;
   width: 100%;
   background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
 }
 
+.sign {
+  margin-left: 8px;
+
+  span{
+    margin-left: 10px;
+    font-size: 30px;
+  }
+}
+
+.sign h5 {
+  font-family: 'TAGACNRG', 'Helvetica', sans-serif;
+  margin: 16px 0;
+}
+
+.copyright {
+  margin: 30px 72px 0 0px;
+
+  a {
+  margin-left: 5px;
+  }
+}
+
+.social-media {
+  margin-right: 8px;
+
+  h5 {
+    margin: 5px 10px 0 0;
+    font-family: 'TAGACNRG', 'Helvetica', sans-serif;
+  }
+}
+
+.social-media a {
+  margin: 5px 0;
+  padding-right: 8px;
+  font-size: 30px;
+}
