@@ -21,7 +21,6 @@
 }
 
 .btn-nav-blue {
-  font-family: 'TAGACNRG', 'Helvetica', sans-serif;
   border-radius: 4px;
   background: transparent;
   color: #22b4b4;
@@ -35,6 +34,8 @@
 
 .btn-font-logout {
   font-family: 'TAGACNRG', 'Helvetica', sans-serif;
+  border-radius: 4px;
+  background: transparent;
     &:hover {
       color: black;
     }
