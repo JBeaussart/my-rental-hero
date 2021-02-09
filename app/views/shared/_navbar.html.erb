@@ -11,6 +11,8 @@
 
     <% if current_user %>
       <%= link_to "Logout", destroy_user_session_path, class: 'btn btn-font-logout btn-outline-danger mx-2 my-2 my-sm-0', method: :delete %>
+    <% else %>
+      <%= link_to 'Sign up', new_user_registration_path, class: 'btn-nav btn-nav-blue' %>
     <% end %>
   </form>
 </nav>
