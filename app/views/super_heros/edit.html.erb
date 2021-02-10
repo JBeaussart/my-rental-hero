@@ -5,7 +5,6 @@
       <%= simple_form_for [ @super_hero ] do |f| %>
         <%= f.input :nickname %>
         <%= f.input :description %>
-        <%= f.input :photo, as: :file %>
         <%= f.submit "Submit", class: "btn btn-success" %>
         <%= link_to "Cancel", user_path(current_user), class: "btn btn-danger" %>
       <% end %>
