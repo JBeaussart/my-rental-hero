@@ -2,7 +2,13 @@
   <div class="row">
     <div class="col-6">
       <h1><%= @super_hero.nickname %></h1>
-          <p><%= @super_hero.description %></p>
+        <% if @super_hero.photo.attached? %>
+          <%= cl_image_tag @super_hero.photo.key, alt: "alttext", :class => 'card-img' %>
+        <% else %>
+          <%= cl_image_tag "unknow_ztlmbc", alt: "alttext" %>
+        <% end %>
+      <div class=card-product-info>
+      <p><%= @super_hero.description %></p>
     </div>
   </div>
 </div>
