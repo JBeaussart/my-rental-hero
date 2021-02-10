@@ -4,7 +4,11 @@
       <h1>Super Heros</h1>
         <% @super_heros.each do |super_hero| %>
           <div class="card-product">
-            <%= image_tag "canard_man.jpg", alt: "Canard-man", :class => 'card-img' %>
+            <% if super_hero.photo.attached? %>
+              <%= cl_image_tag super_hero.photo.key, alt: "alttext", :class => 'card-img' %>
+            <% else %>
+              <%= cl_image_tag "unknow_ztlmbc", alt: "alttext" %>
+            <% end %>
             <div class=card-product-info>
               <h2 class="card-title"><%= link_to super_hero.nickname, super_hero_path(super_hero) %></h2>
               <div class="card-text">
