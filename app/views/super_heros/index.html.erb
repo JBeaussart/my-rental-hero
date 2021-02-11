@@ -1,22 +1,20 @@
-<div class="container">
-  <div class="row">
-    <div class="col-6">
-      <h1>Super Heros</h1>
-        <% @super_heros.each do |super_hero| %>
-          <div class="card-product">
-            <% if super_hero.photo.attached? %>
-              <%= cl_image_tag super_hero.photo.key, alt: "alttext", :class => 'card-img' %>
-            <% else %>
-              <%= cl_image_tag "unknow_ztlmbc", alt: "alttext" %>
-            <% end %>
-            <div class=card-product-info>
-              <h2 class="card-title"><%= link_to super_hero.nickname, super_hero_path(super_hero) %></h2>
-              <div class="card-text">
-                <p><%= super_hero.description %></p>
-              </div>
-            </div>
+<div class="navbar-margin-bottom-card">
+  <div class="container">
+    <div class="card-container">
+      <% @super_heros.each do |super_hero| %>
+        <div class="card card_eddy">
+          <div class="name">
+            <h2><%= link_to super_hero.nickname, super_hero_path(super_hero) %></h2>
+            <p><%= super_hero.description %></p>
           </div>
-        <% end %>
+          <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, aperiam!</p>
+          <% if super_hero.photo.attached? %>
+            <%= cl_image_tag super_hero.photo.key, alt: "alttext", :class => 'avatar' %>
+          <% else %>
+            <%= cl_image_tag "unknow_ztlmbc", alt: "alttext" %>
+          <% end %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
