@@ -2,18 +2,17 @@
   <div class="container">
     <div class="card-container">
       <% @super_heros.each do |super_hero| %>
-        <div class="card card_eddy">
-          <div class="name">
-            <h2><%= link_to super_hero.nickname, super_hero_path(super_hero) %></h2>
-            <p><%= super_hero.description %></p>
+        <a href="<%= super_hero_path(super_hero) %>">
+          <div class="card">
+            <h1 class="hero_name"><%= super_hero.nickname %></h1>
+            <p class="description"><%= super_hero.description %></p>
+            <% if super_hero.photo.attached? %>
+              <%= cl_image_tag super_hero.photo.key, alt: "alttext", :class => 'avatar' %>
+            <% else %>
+              <%= cl_image_tag "unknow_ztlmbc", alt: "alttext" %>
+            <% end %>
           </div>
-          <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, aperiam!</p>
-          <% if super_hero.photo.attached? %>
-            <%= cl_image_tag super_hero.photo.key, alt: "alttext", :class => 'avatar' %>
-          <% else %>
-            <%= cl_image_tag "unknow_ztlmbc", alt: "alttext" %>
-          <% end %>
-        </div>
+        </a>
       <% end %>
     </div>
   </div>

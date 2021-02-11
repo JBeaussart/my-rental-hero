@@ -23,17 +23,11 @@
 
 .avatar{
 	width: 100px;
-	height: 100px;
+	height: 150px;
 	position: absolute;
 	border-radius: 4px;
 	top: 10px;
 	right: 10px;
-}
-
-.name{
-	position: absolute;
-	top: 40px;
-	left: 60px;
 }
 
 .reseau{
@@ -56,13 +50,16 @@
 
 }
 
-.name h2{
+.hero_name{
 	color: #2396F3;
-	font-size: 20px;
+	font-size: 40px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
 }
 
 
-.name p{
+p{
 	color: rgba(0,0,0,0.5);
 	font-size: 15px;
 }
@@ -74,22 +71,19 @@
 	
 }
 
-.card:hover .name h2{
+.card:hover .hero_name{
 	color: white;
 }
 
-.card:hover .name p{
+.card:hover p{
 	color: white;
 }
 .card:hover .description{
 	color: white;
 }
 
-.card:hover .reseau{
-	background: white;
-}
 .avatar:hover{
 	transition: 0.5s;
-	width: 280px;
+	width: 180px;
 	height: 280px;
 }
