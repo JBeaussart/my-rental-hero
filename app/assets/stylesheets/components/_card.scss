@@ -53,8 +53,18 @@
 
 
 .description{
-	color: #f3d423;
+  color: #f3d423;
 	font-size: 20px;
+}
+
+.price {
+  font-family: "ArchitectsDaughter-Regular"; 
+  font-size: 64px;
+  position: relative;
+  top: 120px;
+  left: 10px;
+  color: #f3d423;
+  // z-index: 2;
 }
 
 // CARD HOVER
@@ -68,9 +78,10 @@
 	color: black;
 }
 
-// .card:hover p{
-// 	color: white;
-// }
+.card:hover .price {
+  color: black;
+}
+
 .card:hover .description{
 	color: black;
 }
