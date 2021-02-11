@@ -3,7 +3,7 @@
 
 .card-container{
 	display: flex;
-	justify-content: space-around;
+	justify-content: center;
 	flex-wrap: wrap;
 }
 
@@ -12,78 +12,71 @@
 }
 
 .card{
-	width: 300px;
-	height: 300px;
-	background: white;
+	width: 350px;
+	height: 350px;
+	background: rgba($color: #201010, $alpha: 0.5);
 	border-radius: 5px;
 	box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
 	padding: 20px;
 	position: relative;
+  margin: 30px;
 }
 
 .avatar{
-	width: 100px;
-	height: 150px;
+	width: 125px;
+	height: 187px;
 	position: absolute;
 	border-radius: 4px;
 	top: 10px;
 	right: 10px;
 }
 
-.reseau{
-	position: absolute;
-	top: 150px;
-	width: 260px;
-	height: 40px;
-	text-align: center;
-	background: #2396F3;
-	border-radius: 5px;
-}
-
 .description{
 	position: absolute;
 	bottom: 20px;
+  // right: 5px;
 	font-size: 15px;
 	color: rgba(0,0,0,0.5);
 	text-align: center;
-	width: 260px;
-
+	width: 300px;
+  font-style: italic;
 }
 
 .hero_name{
-	color: #2396F3;
-	font-size: 40px;
+  font-family: 'Therace-0W0pG', 'Helvetica', sans-serif;
+	color: #f3d423;
+	font-size: 56px;
   position: absolute;
   top: 10px;
   left: 10px;
 }
 
 
-p{
-	color: rgba(0,0,0,0.5);
-	font-size: 15px;
+.description{
+	color: #f3d423;
+	font-size: 20px;
 }
 
 // CARD HOVER
 .card:hover{
 	transition: all 0.5s ease;
-	background:  #2396F3;
+	background: rgba($color: #f3d423, $alpha: 1);
 	
 }
 
 .card:hover .hero_name{
-	color: white;
+	color: black;
 }
 
-.card:hover p{
-	color: white;
-}
+// .card:hover p{
+// 	color: white;
+// }
 .card:hover .description{
-	color: white;
+	color: black;
 }
 
-.avatar:hover{
-	transition: 0.5s;
-	width: 180px;
-	height: 280px;
+.avatar:hover {
+	transition: 1s;
+  width: 220px;
+  height: 330px;
 }

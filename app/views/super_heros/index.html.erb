@@ -1,5 +1,5 @@
 <div class="navbar-margin-bottom-card">
-  <div class="container">
+  <%# <div class="container"> %>
     <div class="card-container">
       <% @super_heros.each do |super_hero| %>
         <a href="<%= super_hero_path(super_hero) %>">
@@ -15,5 +15,5 @@
         </a>
       <% end %>
     </div>
-  </div>
+  <%# </div> %>
 </div>
