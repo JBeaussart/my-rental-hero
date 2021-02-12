@@ -8,8 +8,8 @@
         <h1>Book your hero</h1>
         <div class="mt-3">
           <%= simple_form_for [@super_hero, @booking] do |f| %>
-            <%= f.input :starting_date %>
-            <%= f.input :ending_date %>
+            <%= f.input :starting_date, as: :date, html5: true %>
+            <%= f.input :ending_date, as: :date, html5: true %>
             <%= f.submit "Book your hero", class: "btn btn-primary" %>
           <% end %>
         </div>
