@@ -2,7 +2,7 @@ class SuperHerosController < ApplicationController
   def index
     @super_heros = SuperHero.all
 
-    @markers = @super_heros.geocoded.map do |super_hero|
+    @markers = @super_heros.map do |super_hero|
       {
         lat: super_hero.latitude,
         lng: super_hero.longitude

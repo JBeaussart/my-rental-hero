@@ -24,13 +24,16 @@ require("channels")
 
 // External imports
 import "bootstrap";
+import 'mapbox-gl/dist/mapbox-gl.css';
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
+import { initMapbox } from '../plugins/init_mapbox'
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  initMapbox();
 });
 
 window.setTimeout(function() {
@@ -38,11 +41,3 @@ window.setTimeout(function() {
         $(this).remove();
     });
 }, 4000);
-
-import mapboxgl from 'mapbox-gl';
-
-mapboxgl.accessToken = 'pk.eyJ1IjoidHBvenpvYm9uIiwiYSI6ImNraWdjdzJkdzFrODkyenBvb29hamh1cjcifQ.0CjH_oPE9aWa5wg2imreGQ'
-const map = new mapboxgl.Map({
-  container: 'map',
-  style: 'mapbox://styles/mapbox/streets-v10'
-});
