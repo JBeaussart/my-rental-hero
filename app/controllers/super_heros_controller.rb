@@ -4,8 +4,8 @@ class SuperHerosController < ApplicationController
 
     @markers = @super_heros.geocoded.map do |super_hero|
       {
-        lat: flat.latitude,
-        lng: flat.longitude
+        lat: super_hero.latitude,
+        lng: super_hero.longitude
       }
     end
   end
@@ -47,6 +47,6 @@ class SuperHerosController < ApplicationController
   private
 
   def super_hero_params
-    params.require(:super_hero).permit(:nickname, :description, :photo, :price_cents)
+    params.require(:super_hero).permit(:nickname, :description, :photo, :price_cents, :address)
   end
 end

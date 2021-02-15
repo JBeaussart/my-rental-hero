@@ -5,6 +5,7 @@
       <%= simple_form_for [ @super_hero ] do |f| %>
         <%= f.input :nickname %>
         <%= f.input :description %>
+        <%= f.input :address %>
         <%= f.input :price_cents %>
         <%= f.input :photo, as: :file %>
         <%= f.submit "Submit", class: "btn btn-success" %>
