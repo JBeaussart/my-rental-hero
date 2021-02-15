@@ -29,6 +29,7 @@
 	border-radius: 4px;
 	top: 10px;
 	right: 10px;
+	opacity: 0.7;
 }
 
 .description{
@@ -71,7 +72,6 @@
 .card:hover{
 	transition: all 0.5s ease;
 	background: rgba($color: #f3d423, $alpha: 1);
-	
 }
 
 .card:hover .hero_name{
@@ -87,6 +87,7 @@
 }
 
 .avatar:hover {
+	opacity: 1;
 	transition: 1s;
   width: 220px;
   height: 330px;
