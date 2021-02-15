@@ -38,3 +38,11 @@ window.setTimeout(function() {
         $(this).remove();
     });
 }, 4000);
+
+import mapboxgl from 'mapbox-gl';
+
+mapboxgl.accessToken = 'pk.eyJ1IjoidHBvenpvYm9uIiwiYSI6ImNraWdjdzJkdzFrODkyenBvb29hamh1cjcifQ.0CjH_oPE9aWa5wg2imreGQ'
+const map = new mapboxgl.Map({
+  container: 'map',
+  style: 'mapbox://styles/mapbox/streets-v10'
+});
