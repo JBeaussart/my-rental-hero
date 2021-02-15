@@ -1,6 +1,13 @@
 class SuperHerosController < ApplicationController
   def index
     @super_heros = SuperHero.all
+
+    @markers = @super_heros.geocoded.map do |super_hero|
+      {
+        lat: flat.latitude,
+        lng: flat.longitude
+      }
+    end
   end
 
   def show
