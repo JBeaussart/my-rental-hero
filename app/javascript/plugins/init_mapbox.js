@@ -19,19 +19,21 @@ const fitMapToMarkers = (map, markers) => {
 };
 
 const initMapbox = () => {
-  mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
+  if (mapElement) {
+    mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
 
-  const map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v10'
-  });
+    const map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/streets-v10'
+    });
 
-  const markers = JSON.parse(mapElement.dataset.markers);
+    const markers = JSON.parse(mapElement.dataset.markers);
 
-  fitMapToMarkers(map, markers);
-  addMarkers(map, markers);
-  map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken,
-                                      mapboxgl: mapboxgl }));
+    fitMapToMarkers(map, markers);
+    addMarkers(map, markers);
+    map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken,
+                                        mapboxgl: mapboxgl }));
+  }
 };
 
 export { initMapbox };
