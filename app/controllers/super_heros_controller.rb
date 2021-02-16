@@ -1,9 +1,17 @@
 class SuperHerosController < ApplicationController
   def index
+
     if params[:query].present?
       @super_heros = SuperHero.where("nickname ILIKE ?", "%#{params[:query]}%")
     else
       @super_heros = SuperHero.all
+    end
+
+    @markers = @super_heros.map do |super_hero|
+      {
+        lat: super_hero.latitude,
+        lng: super_hero.longitude
+      }
     end
   end
 
@@ -45,6 +53,6 @@ class SuperHerosController < ApplicationController
   private
 
   def super_hero_params
-    params.require(:super_hero).permit(:nickname, :description, :photo, :price_cents)
+    params.require(:super_hero).permit(:nickname, :description, :photo, :price_cents, :address)
   end
 end
