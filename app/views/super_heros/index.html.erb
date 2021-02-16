@@ -9,10 +9,17 @@
           <% if super_hero.photo.attached? %>
             <%= cl_image_tag super_hero.photo.key, alt: "alttext", :class => 'avatar' %>
           <% else %>
-            <%= cl_image_tag "unknow_ztlmbc", alt: "alttext" %>
+            <%= cl_image_tag "unknow_ztlmbc", alt: "alttext", :class => 'avatar' %>
           <% end %>
         </div>
       </a>
     <% end %>
+  </div>
+
+  <div
+    id="map"
+    style="height: 600px; width: 100%"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+    data-markers="<%= @markers.to_json %>">
   </div>
 </div>
