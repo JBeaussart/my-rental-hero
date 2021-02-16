@@ -1,17 +1,22 @@
 class SuperHerosController < ApplicationController
   def index
-    @super_heros = SuperHero.all
+
+    if params[:query].present?
+      @super_heros = SuperHero.where("nickname ILIKE ?", "%#{params[:query]}%")
+    else
+      @super_heros = SuperHero.all
+    end
 
     @markers = @super_heros.map do |super_hero|
       {
         lat: super_hero.latitude,
         lng: super_hero.longitude
       }
-    end
   end
 
   def show
     @super_hero = SuperHero.find(params[:id])
+    @booking = Booking.new
   end
 
   def new

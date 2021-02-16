@@ -1,6 +1,7 @@
 // Import page-specific CSS files here.
 @import "home";
 @import "new";
+@import "show";
 
 .navbar-margin-bottom-login {
   margin-top: 200px;
@@ -16,4 +17,13 @@
 
 .navbar-margin-bottom-card {
   margin-top: 250px;
+}
+
+.navbar-margin-bottom-show {
+  margin-top: 150px;
+  margin-bottom: 100px;
+}
+
+body {
+  background: linear-gradient(to left,#ca2115, #2b2ec5);
 }

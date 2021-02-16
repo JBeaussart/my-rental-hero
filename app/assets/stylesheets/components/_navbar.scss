@@ -1,5 +1,12 @@
 .navbar {
   background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
+  font-family: "ReggaeOne-Regular.ttf";
+}
+
+.nav-bar-form {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .logo_navbar {
@@ -9,14 +16,12 @@
 .user_loggin {
   margin-right: 40px;
   font-size: 20px;
-  font-family: 'TAGACNRG', 'Helvetica', sans-serif;
   color: #22b4b4;
   opacity: .8;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
 .btn-nav {
-  font-family: 'TAGACNRG', 'Helvetica', sans-serif;
   border-radius: 4px;
 }
 
@@ -33,7 +38,6 @@
 }
 
 .btn-font-logout {
-  font-family: 'TAGACNRG', 'Helvetica', sans-serif;
   border-radius: 4px;
   background: transparent;
     &:hover {
