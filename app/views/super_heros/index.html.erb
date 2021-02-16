@@ -9,7 +9,7 @@
           <% if super_hero.photo.attached? %>
             <%= cl_image_tag super_hero.photo.key, alt: "alttext", :class => 'avatar' %>
           <% else %>
-            <%= cl_image_tag "unknow_ztlmbc", alt: "alttext" %>
+            <%= cl_image_tag "unknow_ztlmbc", alt: "alttext", :class => 'avatar' %>
           <% end %>
         </div>
       </a>
