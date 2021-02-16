@@ -4,6 +4,12 @@
   letter-spacing: 2px;
 }
 
+.nav-bar-form {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 .logo_navbar {
   cursor: pointer;
 }
