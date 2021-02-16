@@ -1,68 +1,94 @@
-.card-product {
-  background-color: white;
-  height: 400px;
-  width: 300px;
-  box-shadow: 0 20px 20px rgba(0,0,0,0.4);
+// 
+/*CARD*/
+
+.card-container{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.navbar-margin-bottom-card{
+  background: linear-gradient(to left,#ca2115, #2b2ec5);
+}
+
+.card{
+	width: 350px;
+	height: 350px;
+	background: rgba($color: #201010, $alpha: 0.5);
+	border-radius: 5px;
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+	padding: 20px;
+	position: relative;
+  margin: 30px;
+}
+
+.avatar{
+	width: 125px;
+	height: 187px;
+	position: absolute;
+	border-radius: 4px;
+	top: 10px;
+	right: 10px;
+	opacity: 0.7;
+}
+
+.description{
+	position: absolute;
+	bottom: 20px;
+  // right: 5px;
+	font-size: 15px;
+	color: rgba(0,0,0,0.5);
+	text-align: center;
+	width: 300px;
+  font-style: italic;
+}
+
+.hero_name{
+  font-family: 'Therace-0W0pG', 'Helvetica', sans-serif;
+	color: #f3d423;
+	font-size: 56px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+
+.description{
+  color: #f3d423;
+	font-size: 20px;
+}
+
+.price {
+  font-family: "ArchitectsDaughter-Regular"; 
+  font-size: 64px;
   position: relative;
-  border-radius: 5px;
+  top: 120px;
+  left: 10px;
+  color: #f3d423;
+  // z-index: 2;
 }
 
-.card-img {
-  height: 400px;
-  width: 300px;
-  top: 0px;
-  right: 0px;
-  object-fit: cover;
-  position: absolute;
-  border-radius: 5px;
+// CARD HOVER
+.card:hover{
+	transition: all 0.5s ease;
+	background: rgba($color: #f3d423, $alpha: 1);
 }
 
-.card-title {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
-  color: #4ADD88;
-  opacity: 1;
+.card:hover .hero_name{
+	color: black;
 }
 
-.card-text {
-  font-size: 12px;
-  line-height: 1.4;
-  margin: 8px 0 0;
-  text-align: justify;
-  color: #4ADD88;
-  opacity: 1;
-  p {
-    display: none;
-  }
+.card:hover .price {
+  color: black;
 }
 
-.card-product-info {
-  position: absolute;
-  bottom: 20px;
-  left: 10%;
-  width: 80%;
-  background-color: black;
-  overflow: hidden;
-  box-sizing: border-box;
-  padding: 15px;
-  border-radius: 5px;
-  opacity: 0.4;
+.card:hover .description{
+	color: black;
 }
 
-.card-product-info:hover {
-  position: absolute;
-  box-sizing: border-box;
-  height: 100%;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  box-shadow: 0 20px 20px rgba(0,0,0,1);
-  opacity: 0.4;
-  border-radius: 5px;
-  background-color: black;
-  p {
-    display: block;
-  }
+.avatar:hover {
+	opacity: 1;
+	transition: 1s;
+  width: 220px;
+  height: 330px;
 }

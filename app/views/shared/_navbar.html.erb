@@ -1,0 +1,30 @@
+<nav class="navbar justify-content-between fixed-top">
+  <a class="navbar-brand logo_navbar" href="/"><%= image_tag "logo.png", alt: "Logo", width: 50 %></a>
+  
+    <div class="nav-bar-form">
+      <% if current_user %>
+        <%= link_to "#{current_user.first_name} #{current_user.last_name}", user_path(current_user), class: 'user_loggin' %>
+      <% end %>
+      
+      <%= form_tag super_heros_path, class:"form-inline", method: :get do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Find a SuperHero"
+        %>
+        <%= submit_tag "Search", class: "btn-nav btn-nav-blue" %>
+      <% end %>
+
+    <% if current_user %>
+      <%= link_to 'Edit Profil', edit_user_registration_path, class: 'btn-nav btn-nav-blue mx-2 my-2 my-sm-0'  %>
+    <% else %>
+      <%= link_to "Login", user_session_path, class: 'btn-nav btn-nav-blue mx-2 my-2 my-sm-0' %>
+    <% end %>
+
+      <% if current_user %>
+        <%= link_to "Logout", destroy_user_session_path, class: 'btn btn-font-logout btn-outline-danger', method: :delete %>
+      <% else %>
+        <%= link_to 'Sign up', new_user_registration_path, class: 'btn-nav btn-nav-blue' %>
+      <% end %>
+    </div>
+</nav>

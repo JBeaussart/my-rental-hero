@@ -1,6 +1,10 @@
 class SuperHerosController < ApplicationController
   def index
-    @super_heros = SuperHero.all
+    if params[:query].present?
+      @super_heros = SuperHero.where("nickname ILIKE ?", "%#{params[:query]}%")
+    else
+      @super_heros = SuperHero.all
+    end
   end
 
   def show
@@ -41,6 +45,6 @@ class SuperHerosController < ApplicationController
   private
 
   def super_hero_params
-    params.require(:super_hero).permit(:nickname, :description)
+    params.require(:super_hero).permit(:nickname, :description, :photo, :price_cents)
   end
 end
