@@ -7,7 +7,12 @@
 
     <input class="btn-nav form-control mr-sm-2" type="search" placeholder="Superhero landing" aria-label="Search">
     <button class="btn-nav btn-nav-blue" type="submit">Search</button>
-    <%= link_to "Login", user_session_path, class: 'btn-nav btn-nav-blue mx-2 my-2 my-sm-0' %>
+
+    <% if current_user %>
+      <%= link_to 'Edit Profil', edit_user_registration_path, class: 'btn-nav btn-nav-blue mx-2 my-2 my-sm-0'  %>
+    <% else %>
+      <%= link_to "Login", user_session_path, class: 'btn-nav btn-nav-blue mx-2 my-2 my-sm-0' %>
+    <% end %>
 
     <% if current_user %>
       <%= link_to "Logout", destroy_user_session_path, class: 'btn btn-font-logout btn-outline-danger', method: :delete %>
