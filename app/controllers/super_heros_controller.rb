@@ -12,6 +12,7 @@ class SuperHerosController < ApplicationController
         lat: super_hero.latitude,
         lng: super_hero.longitude
       }
+    end
   end
 
   def show
