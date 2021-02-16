@@ -10,13 +10,13 @@
             <% if super_hero.photo.attached? %>
               <%= cl_image_tag super_hero.photo.key, alt: "alttext", :class => 'avatar' %>
             <% else %>
-              <%= cl_image_tag "unknow_ztlmbc", alt: "alttext" %>
+              <%= cl_image_tag "unknow_ztlmbc", alt: "alttext", :class => 'avatar' %>
             <% end %>
             <div class="edit_delete_superhero">
               <%= link_to edit_super_hero_path(super_hero),class:'btn text-primary edit_super' do %>
                 <i class="fas fa-user-edit"></i>
               <% end %>
-           
+
               <%= link_to super_hero_path(super_hero),class:'btn text-danger delete_super', method: :delete do %>
                 <i class="fa fa-trash"></i>
               <% end %>
@@ -26,7 +26,7 @@
       <% end %>
     </div>
   </div>
-  
+
   <div class="container text-center">
       <% if !current_user.company.nil? %>
         <%= link_to 'Create Super Hero',  new_super_hero_path, class:'btn btn-outline-success btn-lg' %>
