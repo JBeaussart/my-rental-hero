@@ -4,9 +4,16 @@
     <% if current_user %>
       <%= link_to "#{current_user.first_name} #{current_user.last_name}", user_path(current_user), class: 'user_loggin' %>
     <% end %>
-
-    <input class="btn-nav form-control mr-sm-2" type="search" placeholder="Superhero landing" aria-label="Search">
-    <button class="btn-nav btn-nav-blue" type="submit">Search</button>
+    <%= form_tag super_heros_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Find a SuperHero"
+      %>
+      <%= submit_tag "Search", class: "btn btn-primary" %>
+    <% end %>
+    <%# <input class="btn-nav form-control mr-sm-2" type="search" placeholder="Superhero landing" aria-label="Search">
+    <button class="btn-nav btn-nav-blue" type="submit">Search</button> %>
     <%= link_to "Login", user_session_path, class: 'btn-nav btn-nav-blue mx-2 my-2 my-sm-0' %>
 
     <% if current_user %>
