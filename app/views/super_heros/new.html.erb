@@ -6,6 +6,7 @@
         <%= simple_form_for [ @super_hero ] do |f| %>
           <%= f.input :nickname %>
           <%= f.input :description %>
+          <%= f.input :punchline %>
           <%= f.input :address %>
           <%= f.input :price_cents %>
           <%= f.input :photo, as: :file %>

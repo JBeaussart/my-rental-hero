@@ -6,7 +6,7 @@
           <div class="card">
             <h1 class="hero_name"><%= super_hero.nickname %></h1>
             <p class="price"><%= super_hero.price_cents %>$</p>
-            <p class="description"><%= super_hero.description %></p>
+            <p class="description"><%= super_hero.punchline %></p>
             <% if super_hero.photo.attached? %>
               <%= cl_image_tag super_hero.photo.key, alt: "alttext", :class => 'avatar' %>
             <% else %>
