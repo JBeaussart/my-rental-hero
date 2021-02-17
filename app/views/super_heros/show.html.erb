@@ -1,24 +1,38 @@
 <div class="container">
+
   <div class="row">
-    <div class="col-6">
-      <h1><%= @super_hero.nickname %></h1>
+
+    <div class="left-side">
         <% if @super_hero.photo.attached? %>
           <%= cl_image_tag @super_hero.photo.key, alt: "alttext", :class => 'card-img' %>
         <% else %>
           <%= cl_image_tag "unknow_ztlmbc", alt: "alttext" %>
         <% end %>
-      <div class=card-product-info>
-      <p><%= @super_hero.description %></p>
     </div>
-    <div class="booking-form">
-        <h1>Book your hero</h1>
-        <div class="mt-3">
-          <%= simple_form_for [@super_hero, @booking] do |f| %>
-            <%= f.input :starting_date, as: :date, html5: true %>
-            <%= f.input :ending_date, as: :date, html5: true %>
-            <%= f.submit "Book your hero", class: "btn btn-primary" %>
-          <% end %>
-        </div>
+
+    <div class="right-side">
+      <div class="product_text">
+        <h1><%= @super_hero.nickname %></h1>
+
+        <p><%= @super_hero.description %></p>
       </div>
+
+      <div class="price-tag">
+        <p><%= @super_hero.price_cents %></p>
+      </div>
+    </div>
+
   </div>
+
+  <div class="booking-form">
+    <h1>Book your hero</h1>
+    <div class="mt-3">
+      <%= simple_form_for [@super_hero, @booking] do |f| %>
+        <%= f.input :starting_date, as: :date, html5: true %>
+        <%= f.input :ending_date, as: :date, html5: true %>
+        <%= f.submit "Book your hero", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+
 </div>
