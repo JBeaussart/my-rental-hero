@@ -2,9 +2,8 @@
 /*CARD*/
 
 .card-container{
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
+	display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .navbar-margin-bottom-card{
@@ -19,7 +18,7 @@
 	box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
 	padding: 20px;
 	position: relative;
-    margin: 30px;
+  margin: 8px;
 }
 
 .avatar{
