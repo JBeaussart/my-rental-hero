@@ -1,4 +1,9 @@
 /*CARD*/
+.card-container-show {
+  display: flex;
+  justify-content: center;
+  flex-wrap : wrap;
+}
 
 .card-container{
 	display: grid;
