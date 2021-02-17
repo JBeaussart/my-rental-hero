@@ -1,29 +1,44 @@
 .container{
-    align-items: stretch;
+    margin: 100px auto 50px;
 }
 
-.product_text {
-    right: 0;
+.left-side{
+    left: 0;
+    width: 50%;
+    height: fit-content;
+}
+
+.right-side{
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%;
 }
 
 .product_text h1{
     font-family: 'Therace-0W0pG', 'Helvetica', sans-serif;
     color: #22b4b4;
+    font-size: 80px;
 }
 
 .product_text h2{
     font-family: "ReggaeOne-Regular.ttf";
     color: #22b4b4;
+    font-size: 40px;
 }
 
 .product_text p{
     font-family: "ReggaeOne-Regular.ttf";
     color: #22b4b4;
     text-align: justify;
+    font-size: 20px;
 }
 
 .price-tag{
     font-family: "ArchitectsDaughter-Regular";
     color: #f3d423;
     bottom: 0;
+    font-size: 64px;
+    align-self: flex-end;
 }

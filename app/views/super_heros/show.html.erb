@@ -1,10 +1,8 @@
 <div class="container">
 
-
-
   <div class="row">
 
-    <div class="col-6">
+    <div class="left-side">
         <% if @super_hero.photo.attached? %>
           <%= cl_image_tag @super_hero.photo.key, alt: "alttext", :class => 'card-img' %>
         <% else %>
@@ -12,12 +10,16 @@
         <% end %>
     </div>
 
-    <div class="product_text">
-      <h1><%= @super_hero.nickname %></h1>
+    <div class="right-side">
+      <div class="product_text">
+        <h1><%= @super_hero.nickname %></h1>
 
-      <p><%= @super_hero.description %></p>
+        <p><%= @super_hero.description %></p>
+      </div>
 
-      <p class="price-tag"><%= @super_hero.price_cents %></p>
+      <div class="price-tag">
+        <p><%= @super_hero.price_cents %></p>
+      </div>
     </div>
 
   </div>
