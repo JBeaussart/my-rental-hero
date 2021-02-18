@@ -32,4 +32,27 @@
         <%= link_to 'Create Super Hero',  new_super_hero_path, class:'btn btn-outline-success btn-lg' %>
       <% end %>
   </div>
+
+  <div class="container-bookings">
+    <div class="booking-show">
+      <h1>Your bookings</h1>
+      <% current_user.bookings.each do |booking| %>
+        <a href="<%= super_hero_path(booking) %>">
+          <div class="card-booking">
+            <p><%= booking.get_date(booking.starting_date) %></p>
+            <p><%= booking.get_date(booking.ending_date) %></p>
+            <div class="edit_delete_booking">
+              <%= link_to edit_booking_path(booking),class:'btn text-primary edit_super' do %>
+                <i class="fas fa-user-edit"></i>
+              <% end %>
+              <%= link_to booking_path(booking),class:'btn text-danger delete_super', method: :delete do %>
+                <i class="fa fa-trash"></i>
+              <% end %>
+            </div>
+          </div>
+        </a>
+      <% end %>
+    </div>
+  </div>
+
 </div>

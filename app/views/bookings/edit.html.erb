@@ -1,0 +1,14 @@
+<div class="navbar-margin-bottom-forgotpwd position-relative">
+  <div class="container">
+    <div class="row mt-5 rounded">
+      <div class="col-6 m-auto mt-5 w-50 bg-white rounded p-5 border bg-transparent text-white">
+        <h1 class="mb-5">Edit your booking</h1>
+        <%= simple_form_for [@super_hero, @booking] do |f| %>
+        <%= f.input :starting_date, as: :date, html5: true %>
+        <%= f.input :ending_date, as: :date, html5: true %>
+        <%= f.submit "Save your change", class: "btn btn-primary" %>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</div>
