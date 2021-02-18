@@ -1,10 +1,19 @@
 .card-booking{
     width: 240px;
-	height: 160px;
+	height: 180px;
 	background: white;
 	border-radius: 5px;
 	box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
 	padding: 20px;
 	position: relative;
     margin: 30px;
+}
+
+.booking-show h1{
+    padding: 30px;
+	position: relative;
+    font-family: "ReggaeOne-Regular.ttf";
+    color: #22b4b4;
+    font-size: 20px;
+    text-align: left;
 }

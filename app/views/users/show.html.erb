@@ -35,6 +35,7 @@
 
   <div class="container-bookings">
     <div class="booking-show">
+      <h1>Your bookings</h1>
       <% current_user.bookings.each do |booking| %>
         <a href="<%= super_hero_path(booking) %>">
           <div class="card-booking">
