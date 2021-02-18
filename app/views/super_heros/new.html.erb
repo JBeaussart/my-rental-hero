@@ -8,7 +8,7 @@
           <%= f.input :description %>
           <%= f.input :punchline %>
           <%= f.input :address %>
-          <%= f.input :price_cents, label: 'Price per day' %>
+          <%= f.input :price_cents, label: 'Price per day ($)' %>
           <%= f.input :photo, as: :file %>
           <%= f.submit "Submit", class: "btn btn-success" %>
           <%= link_to "Cancel", user_path(current_user), class: "btn btn-danger" %>
