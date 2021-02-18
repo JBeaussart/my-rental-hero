@@ -28,8 +28,10 @@
   </div>
 
   <div class="container text-center">
-      <% if !current_user.company.nil? %>
+      <% if current_user.company != "" %>
         <%= link_to 'Create Super Hero',  new_super_hero_path, class:'btn btn-outline-success btn-lg' %>
+      <% else %>
+        <p>You must have a Company to add a super-hero !</p>
       <% end %>
   </div>
 </div>
