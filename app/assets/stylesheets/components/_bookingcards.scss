@@ -1,7 +1,7 @@
 .card-booking{
-    width: 240px;
-	height: 180px;
-	background: white;
+    width: 320px;
+	height: 240px;
+	background: rgba($color: #201010, $alpha: 0.5);
 	border-radius: 5px;
 	box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
 	padding: 20px;
@@ -10,10 +10,34 @@
 }
 
 .booking-show h1{
-    padding: 30px;
-	position: relative;
     font-family: "ReggaeOne-Regular.ttf";
     color: #22b4b4;
-    font-size: 20px;
+    padding: 30px;
+	position: relative;
+    font-size: 24px;
     text-align: left;
+}
+
+.container-bookings{
+    display: flex;
+    justify-content: center;
+    flex-wrap : wrap;
+    flex-direction: row;
+}
+
+.booking-date{
+    font-family: "ReggaeOne-Regular.ttf";
+    color: #22b4b4;
+}
+
+.super-hero-booked{
+    font-family: "ArchitectsDaughter-Regular";
+    color: #f3d423;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.booking-price{
+    font-family: "ReggaeOne-Regular.ttf";
+    color: #22b4b4;
 }

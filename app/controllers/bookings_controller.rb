@@ -13,14 +13,10 @@ class BookingsController < ApplicationController
     @booking.super_hero = @super_hero
     @booking.user = current_user
     if @booking.save
-      redirect_to super_hero_path(@super_hero)
+      redirect_to user_path(@super_hero)
     else
       render :new
     end
-  end
-
-  def show
-    @user = User.find(params[:user_id])
   end
 
   def edit
