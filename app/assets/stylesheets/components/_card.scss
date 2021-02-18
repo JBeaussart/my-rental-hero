@@ -1,14 +1,17 @@
-//
 /*CARD*/
+.card-container-show {
+  display: flex;
+  justify-content: center;
+  flex-wrap : wrap;
+}
 
 .card-container{
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
+	display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .navbar-margin-bottom-card{
-  background: linear-gradient(to left,#ca2115, #2b2ec5);
+    background: linear-gradient(to left,#ca2115, #2b2ec5);
 }
 
 .card{
@@ -19,7 +22,7 @@
 	box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
 	padding: 20px;
 	position: relative;
-    margin: 30px;
+  margin: 8px;
 }
 
 .avatar{
@@ -32,15 +35,16 @@
 	opacity: 0.7;
 }
 
-.description{
+.punchline{
 	position: absolute;
 	bottom: 20px;
-  // right: 5px;
 	font-size: 15px;
 	color: rgba(0,0,0,0.5);
 	text-align: center;
 	width: 300px;
   font-style: italic;
+  color: #f3d423;
+  font-size: 20px;
 }
 
 .hero_name{
@@ -52,12 +56,6 @@
   left: 10px;
 }
 
-
-.description{
-  color: #f3d423;
-	font-size: 20px;
-}
-
 .price {
   font-family: "ArchitectsDaughter-Regular";
   font-size: 64px;
@@ -65,7 +63,6 @@
   top: 120px;
   left: 10px;
   color: #f3d423;
-  // z-index: 2;
 }
 
 // CARD HOVER
@@ -82,7 +79,7 @@
   color: black;
 }
 
-.card:hover .description{
+.card:hover .punchline{
 	color: black;
 }
 
