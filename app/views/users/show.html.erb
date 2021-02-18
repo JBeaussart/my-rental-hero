@@ -39,8 +39,10 @@
       <% current_user.bookings.each do |booking| %>
         <a href="<%= super_hero_path(booking) %>">
           <div class="card-booking">
-            <p><%= booking.get_date(booking.starting_date) %></p>
-            <p><%= booking.get_date(booking.ending_date) %></p>
+            <p class="super-hero-booked"><%= booking.super_hero.nickname %></p>
+            <p class="booking-date">From <%= booking.get_date(booking.starting_date) %></p>
+            <p class="booking-date">to <%= booking.get_date(booking.ending_date) %></p>
+            <p class="booking-price">Total price : <%= booking.total_price %>$</p>
             <div class="edit_delete_booking">
               <%= link_to edit_booking_path(booking),class:'btn text-primary edit_super' do %>
                 <i class="fas fa-user-edit"></i>
