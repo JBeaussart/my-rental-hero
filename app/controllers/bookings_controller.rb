@@ -19,6 +19,10 @@ class BookingsController < ApplicationController
   end
 
   def show
+    @user = User.find(params[:user_id])
+  end
+
+  def edit
     @booking = Booking.find(params[:id])
   end
 
@@ -31,7 +35,7 @@ class BookingsController < ApplicationController
   def destroy
     @booking = Booking.find(params[:id])
     @booking.destroy
-    redirect_to user_super_hero_path(@super_heros)
+    redirect_to user_path(current_user)
   end
 
   private
