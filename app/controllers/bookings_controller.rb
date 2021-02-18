@@ -12,22 +12,21 @@ class BookingsController < ApplicationController
     @booking.super_hero = @super_hero
     @booking.user = current_user
     if @booking.save
-      flash[:success] = "Your Super Hero has been booked"
       redirect_to super_hero_path(@super_hero)
     else
       render :new
     end
   end
 
-  def show
-    @booking = Booking.find(params[:id])
-  end
+  # def show
+  #   @booking = Booking.find(params[:id])
+  # end
 
-  def update
-    @booking = Booking.find(params[:id])
-    @booking.update(booking_params)
-    redirect_to user_path(current_user)
-  end
+  # def update
+  #   @booking = Booking.find(params[:id])
+  #   @booking.update(booking_params)
+  #   redirect_to user_path(current_user)
+  # end
 
   def destroy
     @booking = Booking.find(params[:id])
