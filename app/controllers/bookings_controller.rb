@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+  require 'date'
 
   # before_action :athenticate_user!
 
