@@ -2,6 +2,10 @@ class BookingsController < ApplicationController
 
   # before_action :athenticate_user!
 
+  def index
+    @booking = Booking.all
+  end
+
   def create
     @super_hero = SuperHero.find(params[:super_hero_id])
     @booking = Booking.new(booking_params)
@@ -15,19 +19,15 @@ class BookingsController < ApplicationController
     end
   end
 
-  def new
-    @booking = Booking.new
+  def show
+    @booking = Booking.find(params[:id])
   end
 
-#   def show
-#     @booking = Booking.find(params[:id])
-#   end
-
-#   def update
-#     @booking = Booking.find(params[:id])
-#     @booking.update(booking_params)
-#     redirect_to user_super_hero_path(@super_hero)
-#   end
+  def update
+    @booking = Booking.find(params[:id])
+    @booking.update(booking_params)
+    redirect_to user_path(current_user)
+  end
 
   def destroy
     @booking = Booking.find(params[:id])
