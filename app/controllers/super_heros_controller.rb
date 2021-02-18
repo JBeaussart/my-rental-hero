@@ -7,10 +7,11 @@ class SuperHerosController < ApplicationController
       @super_heros = SuperHero.all
     end
 
-    @markers = @super_heros.map do |super_hero|
+    @markers = @super_heros.geocoded.map do |super_hero|
       {
         lat: super_hero.latitude,
-        lng: super_hero.longitude
+        lng: super_hero.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { super_hero: super_hero })
       }
     end
   end
