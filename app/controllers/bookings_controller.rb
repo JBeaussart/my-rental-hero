@@ -18,15 +18,15 @@ class BookingsController < ApplicationController
     end
   end
 
-  # def show
-  #   @booking = Booking.find(params[:id])
-  # end
+  def show
+    @booking = Booking.find(params[:id])
+  end
 
-  # def update
-  #   @booking = Booking.find(params[:id])
-  #   @booking.update(booking_params)
-  #   redirect_to user_path(current_user)
-  # end
+  def update
+    @booking = Booking.find(params[:id])
+    @booking.update(booking_params)
+    redirect_to user_path(current_user)
+  end
 
   def destroy
     @booking = Booking.find(params[:id])
