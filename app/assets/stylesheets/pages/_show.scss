@@ -7,3 +7,15 @@
 .edit_super, .delete_super {
   font-size: 24px;
 }
+
+.show-user-container{
+  display: flex;
+  justify-content: center;
+  flex-wrap : wrap;
+}
+
+.super-heros-cards{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-start: auto;
+}
