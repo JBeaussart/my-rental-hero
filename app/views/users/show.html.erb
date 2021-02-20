@@ -3,12 +3,12 @@
 <div class="show-user-container">
 
     <div class="card-container-show">
+      <h1 class="super-hero-cards-title">Vos super-héros</h1>
       <div class="super-heros-cards">
         <% current_user.super_heros.each do |super_hero| %>
-        <a href="<%= super_hero_path(super_hero) %>">
-          <div class="card">
+                  <div class="card">
             <h1 class="hero_name"><%= super_hero.nickname %></h1>
-            <p class="price"><%= super_hero.price_cents %>$</p>
+            <p class="price"><%= super_hero.price_cents %>€/jour</p>
             <p class="punchline"><%= super_hero.punchline %></p>
             <% if super_hero.photo.attached? %>
               <%= cl_image_tag super_hero.photo.key, alt: "alttext", :class => 'avatar' %>
@@ -26,7 +26,7 @@
             </div>
           </div>
 
-        </a>
+
       <% end %>
       </div>
 
