@@ -7,3 +7,21 @@
 .edit_super, .delete_super {
   font-size: 24px;
 }
+
+.show-user-container{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.super-heros-cards{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.super-hero-cards-title{
+  font-family: "ReggaeOne-Regular.ttf";
+  color: #22b4b4;
+  padding: 30px;
+  font-size: 24px;
+  text-align: center;
+}

@@ -1,15 +1,4 @@
 /*CARD*/
-.card-container-show {
-  display: flex;
-  justify-content: center;
-  flex-wrap : wrap;
-}
-
-.card-container{
-	display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
 .navbar-margin-bottom-card{
     background: linear-gradient(to left,#ca2115, #2b2ec5);
 }
@@ -21,7 +10,6 @@
 	border-radius: 5px;
 	box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
 	padding: 20px;
-	position: relative;
   	margin: 8px;
 }
 
@@ -58,7 +46,7 @@
 
 .price {
   font-family: "ArchitectsDaughter-Regular";
-  font-size: 64px;
+  font-size: 40px;
   position: relative;
   top: 120px;
   left: 10px;

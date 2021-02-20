@@ -1,11 +1,13 @@
 <div class="navbar-margin-bottom-show">
-  <div class="container-fluid">
+  <div class="show-user-container">
     <div class="card-container-show">
-      <% current_user.super_heros.each do |super_hero| %>
-        <a href="<%= super_hero_path(super_hero) %>">
+      <h1 class="super-hero-cards-title">Vos super-héros</h1>
+      <div class="super-heros-cards">
+        
+        <% current_user.super_heros.each do |super_hero| %>
           <div class="card">
             <h1 class="hero_name"><%= super_hero.nickname %></h1>
-            <p class="price"><%= super_hero.price_cents %>$</p>
+            <p class="price"><%= super_hero.price_cents %>€/jour</p>
             <p class="punchline"><%= super_hero.punchline %></p>
             <% if super_hero.photo.attached? %>
               <%= cl_image_tag super_hero.photo.key, alt: "alttext", :class => 'avatar' %>
@@ -16,47 +18,45 @@
               <%= link_to edit_super_hero_path(super_hero),class:'btn text-primary edit_super' do %>
                 <i class="fas fa-user-edit"></i>
               <% end %>
-
               <%= link_to super_hero_path(super_hero),class:'btn text-danger delete_super', method: :delete do %>
                 <i class="fa fa-trash"></i>
               <% end %>
             </div>
           </div>
-        </a>
-      <% end %>
+        <% end %>
+      </div>
+      
+      <div class="container text-center">
+        <% if current_user.company != "" %>
+          <%= link_to 'Create Super Hero',  new_super_hero_path, class:'btn btn-outline-success btn-lg' %>
+        <% else %>
+          <%= link_to 'You must have a Company to add a super-hero !', edit_user_registration_path, class:'btn btn-outline-success btn-lg' %>
+        <% end %>
+      </div>
     </div>
-  </div>
-
-  <div class="container text-center">
-      <% if current_user.company != "" %>
-        <%= link_to 'Mettre en location votre Héros',  new_super_hero_path, class:'btn btn-outline-success btn-lg' %>
-      <% else %>
-        <%= link_to 'You must have a Company to add a super-hero !', edit_user_registration_path, class:'btn btn-outline-success btn-lg' %>
-      <% end %>
-      <br>
-        <%= link_to 'Editer votre profil', edit_user_registration_path, class: 'btn btn-outline-success btn-lg mt-3'  %>
-  </div>
-
-  <div class="container-bookings">
-    <div class="booking-show">
-      <h1>Your bookings</h1>
-      <% current_user.bookings.each do |booking| %>
-        <div class="card-booking">
-          <p class="super-hero-booked"><%= booking.super_hero.nickname %></p>
-          <p class="booking-date">From <%= booking.get_date(booking.starting_date) %></p>
-          <p class="booking-date">to <%= booking.get_date(booking.ending_date) %></p>
-          <p class="booking-price">Total price : <%= booking.total_price %>$</p>
-          <div class="edit_delete_booking">
-            <%= link_to edit_booking_path(booking),class:'btn text-primary edit_super' do %>
-              <i class="fas fa-user-edit"></i>
-            <% end %>
-            <%= link_to booking_path(booking),class:'btn text-danger delete_super', method: :delete do %>
-              <i class="fa fa-trash"></i>
-            <% end %>
+    
+    <div class="container-bookings">
+      <div class="booking-show">
+        <h1>Your bookings</h1>
+        <% current_user.bookings.each do |booking| %>
+          <div class="card-booking">
+            <p class="super-hero-booked"><%= booking.super_hero.nickname %></p>
+            <p class="booking-date">From <%= booking.get_date(booking.starting_date) %></p>
+            <p class="booking-date">to <%= booking.get_date(booking.ending_date) %></p>
+            <p class="booking-price">Total price : <%= booking.total_price %>$</p>
+            
+            <div class="edit_delete_booking">
+              <%= link_to edit_booking_path(booking),class:'btn text-primary edit_super' do %>
+                <i class="fas fa-user-edit"></i>
+              <% end %>
+              
+              <%= link_to booking_path(booking),class:'btn text-danger delete_super', method: :delete do %>
+                <i class="fa fa-trash"></i>
+              <% end %>
+            </div>
           </div>
-        </div>
-      <% end %>
+        <% end %>
+      </div>
     </div>
   </div>
-
 </div>
