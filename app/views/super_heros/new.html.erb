@@ -8,7 +8,7 @@
           <%= f.input :description %>
           <%= f.input :punchline %>
           <%= f.input :address, label: 'Adresse' %>
-          <%= f.input :price_cents, label: 'Prix journalier ($)' %>
+          <%= f.input :price_cents, label: 'Prix journalier' %>
           <%= f.input :photo, as: :file %>
           <%= f.submit "Valider", class: "btn btn-success" %>
           <%= link_to "Annuler", user_path(current_user), class: "btn btn-danger" %>
