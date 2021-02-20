@@ -1,18 +1,20 @@
-<div class="position-relative">
-  <div class="container">
-    <div class="row mt-5 rounded">
-      <div class="col-6 m-auto mt-5 w-50 bg-white rounded p-5 border bg-transparent text-white">
-        <h1 class="mb-10">Modifier Héros</h1>
-        <%= simple_form_for [ @super_hero ] do |f| %>
-          <%= f.input :nickname, label: 'Nom' %>
-          <%= f.input :description %>
-          <%= f.input :punchline %>
-          <%= f.input :address, label: 'Adresse' %>
-          <%= f.input :price_cents, label: 'Prix journalier' %>
-          <%= f.input :photo, as: :file %>
-          <%= f.submit "Valider", class: "btn btn-success" %>
-          <%= link_to "Annuler", user_path(current_user), class: "btn btn-danger" %>
-        <% end %>
+<div class="navbar-margin-bottom-signup">
+  <div class="position-relative">
+    <div class="container">
+      <div class="row mt-5 rounded">
+        <div class="col-6 m-auto mt-5 w-50 bg-white rounded p-5 border bg-transparent text-white">
+          <h1 class="mb-10">Modifier Héros</h1>
+          <%= simple_form_for [ @super_hero ] do |f| %>
+            <%= f.input :nickname, label: 'Nom' %>
+            <%= f.input :description %>
+            <%= f.input :punchline %>
+            <%= f.input :address, label: 'Adresse' %>
+            <%= f.input :price_cents, label: 'Prix journalier' %>
+            <%= f.input :photo, as: :file %>
+            <%= f.submit "Valider", class: "btn btn-success" %>
+            <%= link_to "Annuler", user_path(current_user), class: "btn btn-danger" %>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
