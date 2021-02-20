@@ -1,9 +1,15 @@
 <div class="navbar-margin-bottom-show">
   <div class="show-user-container">
     <div class="card-container-show">
-      <h1 class="super-hero-cards-title">Vos super-héros</h1>
-      <div class="super-heros-cards">
-        
+      <div class="super-hero-cards-title">
+        <% if current_user.company != "" %>
+          <%= link_to 'Ajouter un Super Héros',  new_super_hero_path, class:'btn btn-outline-success btn-lg' %>
+        <% else %>
+          <%= link_to 'You must have a Company to add a super-hero !', edit_user_registration_path, class:'btn btn-outline-success btn-lg' %>
+        <% end %>
+      </div>
+
+      <div class="super-heros-cards">    
         <% current_user.super_heros.each do |super_hero| %>
           <div class="card">
             <h1 class="hero_name"><%= super_hero.nickname %></h1>
@@ -25,25 +31,17 @@
           </div>
         <% end %>
       </div>
-      
-      <div class="container text-center">
-        <% if current_user.company != "" %>
-          <%= link_to 'Create Super Hero',  new_super_hero_path, class:'btn btn-outline-success btn-lg' %>
-        <% else %>
-          <%= link_to 'You must have a Company to add a super-hero !', edit_user_registration_path, class:'btn btn-outline-success btn-lg' %>
-        <% end %>
-      </div>
     </div>
     
     <div class="container-bookings">
       <div class="booking-show">
-        <h1>Your bookings</h1>
+        <h1>Vos réservations</h1>
         <% current_user.bookings.each do |booking| %>
           <div class="card-booking">
             <p class="super-hero-booked"><%= booking.super_hero.nickname %></p>
-            <p class="booking-date">From <%= booking.get_date(booking.starting_date) %></p>
-            <p class="booking-date">to <%= booking.get_date(booking.ending_date) %></p>
-            <p class="booking-price">Total price : <%= booking.total_price %>$</p>
+            <p class="booking-date">De <%= booking.get_date(booking.starting_date) %></p>
+            <p class="booking-date">A <%= booking.get_date(booking.ending_date) %></p>
+            <p class="booking-price">Prix : <%= booking.total_price %>$</p>
             
             <div class="edit_delete_booking">
               <%= link_to edit_booking_path(booking),class:'btn text-primary edit_super' do %>
