@@ -1,27 +1,27 @@
+.super-hero-container{
+    margin: 100px 480px 50px;
+}
+
+.super-hero-info{
+    display: flex;
+    justify-content: space-between;
+}
+
 .left-side{
     left: 0;
-    width: 50%;
     height: fit-content;
+    margin-right: 50px;
 }
 
 .right-side{
     flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
     align-items: flex-start;
-    width: 50%;
 }
 
 .product_text h1{
     font-family: 'Therace-0W0pG', 'Helvetica', sans-serif;
-    color: #22b4b4;
+    color: #f3d423;
     font-size: 80px;
-}
-
-.product_text h2{
-    font-family: "ReggaeOne-Regular.ttf";
-    color: #22b4b4;
-    font-size: 40px;
 }
 
 .product_text p{
@@ -39,8 +39,9 @@
 }
 
 .booking-form{
+    margin-top: 50px;
     width: 320px;
-
+    justify-content: center;
 }
 
 .booking-form h1{
