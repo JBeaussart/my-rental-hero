@@ -1,18 +1,20 @@
-<div class="position-relative">
-  <div class="container">
-    <div class="row mt-5 rounded">
-      <div class="col-6 m-auto mt-5 w-50 bg-white rounded p-5 border bg-transparent text-white">
-        <h1 class="mb-10">Edit a Super Hero</h1>
-        <%= simple_form_for [ @super_hero ] do |f| %>
-          <%= f.input :nickname %>
-          <%= f.input :description %>
-          <%= f.input :punchline %>
-          <%= f.input :address %>
-          <%= f.input :price_cents, label: 'Price per day ($)' %>
-          <%= f.input :photo, as: :file %>
-          <%= f.submit "Submit", class: "btn btn-success" %>
-          <%= link_to "Cancel", user_path(current_user), class: "btn btn-danger" %>
-        <% end %>
+<div class="navbar-margin-bottom-signup">
+  <div class="position-relative">
+    <div class="container">
+      <div class="row mt-5 rounded">
+        <div class="col-6 m-auto mt-5 w-50 bg-white rounded p-5 border bg-transparent text-white">
+          <h1 class="mb-10">Edit a Super Hero</h1>
+          <%= simple_form_for [ @super_hero ] do |f| %>
+            <%= f.input :nickname %>
+            <%= f.input :description %>
+            <%= f.input :punchline %>
+            <%= f.input :address %>
+            <%= f.input :price_cents, label: 'Price per day ($)' %>
+            <%= f.input :photo, as: :file %>
+            <%= f.submit "Submit", class: "btn btn-success" %>
+            <%= link_to "Cancel", user_path(current_user), class: "btn btn-danger" %>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
