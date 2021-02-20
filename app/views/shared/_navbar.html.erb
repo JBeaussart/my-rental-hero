@@ -15,7 +15,7 @@
       <% end %>
 
     <% if current_user %>
-        <%= link_to "Vos réservations", user_path(current_user), class: 'btn-nav btn-nav-blue mx-2 my-2 my-sm-0' %>
+        <%= link_to "Votre profil", user_path(current_user), class: 'btn-nav btn-nav-blue mx-2 my-2 my-sm-0' %>
     <% else %>
       <%= link_to "Connexion", user_session_path, class: 'btn-nav btn-nav-blue mx-2 my-2 my-sm-0' %>
     <% end %>
