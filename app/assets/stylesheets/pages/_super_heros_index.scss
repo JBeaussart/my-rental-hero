@@ -3,3 +3,8 @@
   align-items: flex-start;
   margin-top: 75px;
 }
+
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
