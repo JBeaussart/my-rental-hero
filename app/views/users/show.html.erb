@@ -3,6 +3,7 @@
     <div class="card-container-show">
       <h1 class="super-hero-cards-title">Vos super-héros</h1>
       <div class="super-heros-cards">
+        
         <% current_user.super_heros.each do |super_hero| %>
           <div class="card">
             <h1 class="hero_name"><%= super_hero.nickname %></h1>
@@ -24,6 +25,7 @@
           </div>
         <% end %>
       </div>
+      
       <div class="container text-center">
         <% if current_user.company != "" %>
           <%= link_to 'Create Super Hero',  new_super_hero_path, class:'btn btn-outline-success btn-lg' %>
@@ -32,6 +34,7 @@
         <% end %>
       </div>
     </div>
+    
     <div class="container-bookings">
       <div class="booking-show">
         <h1>Your bookings</h1>
@@ -41,10 +44,12 @@
             <p class="booking-date">From <%= booking.get_date(booking.starting_date) %></p>
             <p class="booking-date">to <%= booking.get_date(booking.ending_date) %></p>
             <p class="booking-price">Total price : <%= booking.total_price %>$</p>
+            
             <div class="edit_delete_booking">
               <%= link_to edit_booking_path(booking),class:'btn text-primary edit_super' do %>
                 <i class="fas fa-user-edit"></i>
               <% end %>
+              
               <%= link_to booking_path(booking),class:'btn text-danger delete_super', method: :delete do %>
                 <i class="fa fa-trash"></i>
               <% end %>
