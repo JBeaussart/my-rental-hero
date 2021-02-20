@@ -29,11 +29,12 @@
 
   <div class="container text-center">
       <% if current_user.company != "" %>
-        <%= link_to 'Create Super Hero',  new_super_hero_path, class:'btn btn-outline-success btn-lg' %>
+        <%= link_to 'Mettre en location votre Héros',  new_super_hero_path, class:'btn btn-outline-success btn-lg' %>
       <% else %>
         <%= link_to 'You must have a Company to add a super-hero !', edit_user_registration_path, class:'btn btn-outline-success btn-lg' %>
       <% end %>
-      <%= link_to 'Editer son profil', edit_user_registration_path, class: 'btn btn-outline-success btn-lg'  %>
+      <br>
+        <%= link_to 'Editer votre profil', edit_user_registration_path, class: 'btn btn-outline-success btn-lg mt-3'  %>
   </div>
 
   <div class="container-bookings">
