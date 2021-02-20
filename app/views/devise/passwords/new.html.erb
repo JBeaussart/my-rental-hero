@@ -2,7 +2,7 @@
 <div class="image-logo-bg-left-forgotpwd"><%= image_tag("deadpool.png", :alt => "logo", class:"logo-size-form-forgotpwd-right") %></div>
 <div class="image-logo-bg-right-forgotpwd"><%= image_tag("wolverine.png", :alt => "logo", class:"logo-size-form-forgotpwd-left") %></div>
 <div class="container mt-5 w-50 bg-white rounded p-5 border bg-transparent text-white">
-<h2>Forgot your password?</h2>
+<h2>Mot de passe oublié?</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= f.error_notification %>
@@ -15,7 +15,7 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Send me reset password instructions", class:"btn btn-primary" %>
+    <%= f.button :submit, "Valider", class:"btn btn-danger" %>
   </div>
 <% end %>
 
